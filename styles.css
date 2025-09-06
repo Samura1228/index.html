@@ -1,0 +1,239 @@
+/* Base Styles */
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --background-color: #f8f9fa;
+    --text-color: #212529;
+    --border-color: #dee2e6;
+    --success-color: #28a745;
+    --danger-color: #dc3545;
+    --warning-color: #ffc107;
+    --info-color: #17a2b8;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+header h1 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+#user-info {
+    display: flex;
+    align-items: center;
+}
+
+/* Navigation */
+nav {
+    margin: 1rem 0;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    border-bottom: 1px solid var(--border-color);
+}
+
+nav li {
+    margin-right: 1rem;
+}
+
+nav a {
+    display: block;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    color: var(--secondary-color);
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+}
+
+nav a.active {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+}
+
+/* Main Content */
+main {
+    padding: 1rem 0;
+}
+
+section {
+    display: none;
+}
+
+section.active {
+    display: block;
+}
+
+h2 {
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+/* NFT Grid */
+.nft-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.nft-card {
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    background-color: white;
+}
+
+.nft-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.nft-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.nft-card-content {
+    padding: 1rem;
+}
+
+.nft-card h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.nft-card p {
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+}
+
+.nft-card .price {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.nft-card .btn {
+    display: block;
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    text-align: center;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Wallet Section */
+.wallet-info {
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+.wallet-info > div {
+    flex: 1;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 8px;
+    margin-right: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.wallet-actions {
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+.wallet-actions button {
+    padding: 0.5rem 1rem;
+    margin-right: 1rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Stats Section */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.stat-card {
+    padding: 1rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+    margin-top: 2rem;
+    padding: 1rem 0;
+    text-align: center;
+    border-top: 1px solid var(--border-color);
+    color: var(--secondary-color);
+}
+
+/* Dark Theme */
+body.dark-theme {
+    --background-color: #212529;
+    --text-color: #f8f9fa;
+    --border-color: #495057;
+}
+
+body.dark-theme .nft-card,
+body.dark-theme .stat-card,
+body.dark-theme .wallet-info > div {
+    background-color: #343a40;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    nav ul {
+        flex-wrap: wrap;
+    }
+    
+    .wallet-info {
+        flex-direction: column;
+    }
+    
+    .wallet-info > div {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+}
