@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NFT Marketplace</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Telegram Mini App SDK -->
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>NFT Marketplace</h1>
+            <div id="user-info">
+                <!-- User info will be displayed here -->
+            </div>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="#" class="active" data-section="browse">Browse NFTs</a></li>
+                <li><a href="#" data-section="my-nfts">My NFTs</a></li>
+                <li><a href="#" data-section="wallet">Wallet</a></li>
+                <li><a href="#" data-section="stats">Stats</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <!-- Browse NFTs Section -->
+            <section id="browse" class="active">
+                <h2>Browse NFTs</h2>
+                <div class="nft-grid" id="nft-grid">
+                    <!-- NFTs will be loaded here -->
+                    <div class="nft-card">
+                        <img src="https://via.placeholder.com/300" alt="NFT">
+                        <div class="nft-card-content">
+                            <h3>Cosmic Voyager</h3>
+                            <p>Cosmic Series</p>
+                            <p class="price">0.5 TON</p>
+                            <button class="btn">View Details</button>
+                        </div>
+                    </div>
+                    <div class="nft-card">
+                        <img src="https://via.placeholder.com/300" alt="NFT">
+                        <div class="nft-card-content">
+                            <h3>Digital Warrior</h3>
+                            <p>Digital Legends</p>
+                            <p class="price">1.2 TON</p>
+                            <button class="btn">View Details</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- My NFTs Section -->
+            <section id="my-nfts">
+                <h2>My NFTs</h2>
+                <div class="nft-grid">
+                    <div class="nft-card">
+                        <img src="https://via.placeholder.com/300" alt="NFT">
+                        <div class="nft-card-content">
+                            <h3>Ethereal Beauty</h3>
+                            <p>Ethereal Series</p>
+                            <button class="btn">List for Sale</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Wallet Section -->
+            <section id="wallet">
+                <h2>Wallet</h2>
+                <div class="wallet-info">
+                    <div class="balance">
+                        <h3>Balance</h3>
+                        <p id="wallet-balance">5.75 TON</p>
+                    </div>
+                    <div class="address">
+                        <h3>Address</h3>
+                        <p id="wallet-address">0x1234...5678</p>
+                    </div>
+                </div>
+                <div class="wallet-actions">
+                    <button id="deposit-btn">Deposit</button>
+                    <button id="withdraw-btn">Withdraw</button>
+                </div>
+            </section>
+
+            <!-- Stats Section -->
+            <section id="stats">
+                <h2>Marketplace Stats</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3>Total NFTs</h3>
+                        <p id="total-nfts">150</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Listed for Sale</h3>
+                        <p id="listed-nfts-count">75</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Total Sales</h3>
+                        <p id="total-sales">42</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Total Volume</h3>
+                        <p id="total-volume">120.50 TON</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 NFT Marketplace</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
